@@ -1,0 +1,25 @@
+.dentist-card {
+    border-radius: 6px;
+    border: 1px solid silver;
+    padding: 15px;
+}
+
+.name{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.button-detail{
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.button-favs {
+    padding: 5px;
+}

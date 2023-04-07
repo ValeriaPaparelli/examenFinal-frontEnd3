@@ -1,0 +1,7 @@
+.detail-container{
+    display: flex;
+    border: 1px solid silver;
+    border-radius: 6px;
+    width: 40%;
+    margin: 0 auto;
+}

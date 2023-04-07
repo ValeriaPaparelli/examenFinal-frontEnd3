@@ -1,0 +1,28 @@
+nav {
+    background-color: rgb(234, 242, 239);
+    margin-bottom: 50px;
+}
+
+.title-navbar {
+    color: rgb(68, 66, 65);
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+   list-style-type: none;
+   padding: 30px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: rgb(39, 34, 32);
+    
+}
+
+.navLink:hover{
+    color: rgb(94, 86, 82);
+}
