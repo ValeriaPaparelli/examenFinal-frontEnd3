@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./DentistCard.css";
 import defaultImage from "../../../assets/dentist_user.png";
 
-const DentistCard = ({ dentist }) => {
+const DentistCard = ({ dentist, showFavButton }) => {
   const { name, username, id } = dentist;
 
   const [addedTofav, setAddedToFav] = useState(false);
@@ -55,9 +55,11 @@ const DentistCard = ({ dentist }) => {
         <button onClick={handleDetailClick} className="button-detail">
           Ver detalle
         </button>
-        <button onClick={handleFavsClick} className="button-favs">
-          {addedTofav ? "Quitar de favoritos" : "Agregar a favoritos"}
-        </button>
+        {showFavButton && (
+          <button onClick={handleFavsClick} className="button-favs">
+            {addedTofav ? "Quitar de favoritos" : "Agregar a favoritos"}
+          </button>
+        )}
       </div>
     </div>
   );

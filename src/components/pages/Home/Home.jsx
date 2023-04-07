@@ -1,9 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import ThemeContext from "../../../context/ThemeContext";
 import Dentists from "../../common/Dentists/Dentists";
 import "./Home.css";
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext);
+
   const [loading, setLoading] = useState(true);
   const [dentists, setDentists] = useState(null);
   const [error, setError] = useState(false);
@@ -21,9 +24,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div
+      className="page"
+      style={{ color: theme.fontColor, background: theme.backgroundColor }}
+    >
       {loading && <p className="loading">cargando...</p>}
-      {dentists && <Dentists dentists={dentists} />}
+      {dentists && <Dentists dentists={dentists} showFavButton />}
       {error && <p className="error">Error al cargar la página</p>}
     </div>
   );

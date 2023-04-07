@@ -1,10 +1,8 @@
 nav {
-    background-color: rgb(234, 242, 239);
-    margin-bottom: 50px;
-}
-
-.title-navbar {
-    color: rgb(68, 66, 65);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul {
@@ -19,8 +17,6 @@ li {
 
 .navLink {
     text-decoration: none;
-    color: rgb(39, 34, 32);
-    
 }
 
 .navLink:hover{
