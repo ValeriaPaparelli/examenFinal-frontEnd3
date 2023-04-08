@@ -22,8 +22,10 @@ const DentistCard = ({ dentist, showFavButton }) => {
       favs = JSON.parse(prevFavs);
       if (!addedTofav) {
         favs.push(dentist);
+        alert("Se agregó a favoritos");
       } else {
         favs = favs.filter((fav) => fav.id !== dentist.id);
+        alert("Se quitó de favoritos");
       }
     } else {
       favs = [dentist];
@@ -48,7 +50,7 @@ const DentistCard = ({ dentist, showFavButton }) => {
 
   return (
     <div className="dentist-card">
-      <img width="150px" src={defaultImage} alt="" />
+      <img width="150px" src={defaultImage} alt="Dentist Image" />
       <p className="name">{name}</p>
       <p className="name">{username}</p>
       <div className="buttons">

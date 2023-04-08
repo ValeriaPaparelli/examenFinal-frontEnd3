@@ -22,3 +22,8 @@ li {
 .navLink:hover{
     color: rgb(94, 86, 82);
 }
+
+.button-theme {
+    padding: 5px;
+    border-radius: 6px;
+}

@@ -21,7 +21,7 @@ const Dentist = () => {
   }, []);
 
   return (
-    <div>
+    <div className="page">
       {loading && <p>cargando...</p>}
       {dentist && <DentistDetail dentist={dentist} />}
       {error && <p>error al cargar la página</p>}

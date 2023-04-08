@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import "./Navbar.css";
-import ThemeContext from "../../../context/ThemeContext";
+import ThemeContext, { themes } from "../../../context/ThemeContext";
 
 const Navbar = () => {
   const { handleChangeTheme, theme } = useContext(ThemeContext);
@@ -14,7 +14,11 @@ const Navbar = () => {
       }}
     >
       <h3 className="title-navbar">DH Odonto</h3>
-      <button onClick={handleChangeTheme}>Cambiar tema</button>
+      <button onClick={handleChangeTheme} className="button-theme">
+        {theme === themes.dark
+          ? "cambiar a tema claro"
+          : "Cambiar a tema oscuro"}
+      </button>
       <ul>
         <li>
           <NavLink

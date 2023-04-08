@@ -9,10 +9,10 @@ const DentistDetail = ({ dentist }) => {
 
   return (
     <div
-      className="detail-container page"
+      className="detail-container"
       style={{ color: theme.fontColor, background: theme.backgroundColor }}
     >
-      <img src={defaultImage} alt="" />
+      <img src={defaultImage} alt="Dentist Image" />
       <div>
         <h4>{name}</h4>
         <p>{email}</p>
